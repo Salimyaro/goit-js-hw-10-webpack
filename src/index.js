@@ -1,7 +1,8 @@
 import './css/styles.css';
-import menuMarkup from './js/menu';
+import menuItemsTpl from './templates/menu-items.hbs';
+import menuData from './menu.json';
 import refs from './js/refs';
 import onThemeSwitchClick from './js/theme';
 
-refs.menuList.innerHTML = menuMarkup;
+refs.menuList.innerHTML = menuItemsTpl(menuData);
 refs.themeSwitch.addEventListener('change', onThemeSwitchClick);
