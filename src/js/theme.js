@@ -21,10 +21,8 @@ function changeTheme(theme) {
 }
 
 function onThemeSwitchClick() {
-  localStorage.setItem(
-    STORAGE_KEY,
-    refs.themeSwitch.checked ? Theme.DARK : Theme.LIGHT,
-  );
-  changeTheme(localStorage.getItem(STORAGE_KEY));
+  const newTheme = refs.themeSwitch.checked ? Theme.DARK : Theme.LIGHT;
+  localStorage.setItem(STORAGE_KEY, newTheme);
+  changeTheme(newTheme);
 }
 export default onThemeSwitchClick;
